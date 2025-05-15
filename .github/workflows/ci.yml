@@ -130,7 +130,7 @@ jobs:
           cat <<EOF > /tmp/values-override.yaml
           standard-app:
             image:
-              name: ${{ secrets.HARBOR_URL }}/library/standard-app:${{ github.sha }}
+              name: ${{ secrets.HARBOR_URL }}/library/aan-standard-app:${{ github.sha }}
           EOF
           
           # Installation/mise à jour du chart Helm avec les valeurs personnalisées
@@ -202,7 +202,7 @@ jobs:
           sudo chmod a+x /usr/local/bin/yq
           
           # Mise à jour du tag d'image dans le fichier values.yaml
-          yq eval '.image.name = "${{ secrets.HARBOR_URL }}/library/standard-app:${{ github.sha }}"' -i charts/standard-app/values.yaml
+          yq eval '.image.name = "${{ secrets.HARBOR_URL }}/library/aan-standard-app:${{ github.sha }}"' -i charts/standard-app/values.yaml
           
           # Vérification de la mise à jour
           cat charts/standard-app/values.yaml
