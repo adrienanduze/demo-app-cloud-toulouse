@@ -1,5 +1,5 @@
 
-## Guide d'Atelier
+## Guide d'atelier
 
 ### Table des Matières
 1. [Introduction](#introduction)
